@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es" crystal-theme>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+	<meta name="description" content="Convertí texto a letras decorativas, generá paletas de color y escribí con tipografías libres." />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a202c" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-title" content="Generadores" />
+	<link rel="manifest" href="/manifest.webmanifest" />
+	<link rel="icon" type="image/webp" href="/ui/images/mini-logo.webp" />
+	<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+	<title>Generadores y utilidades · Abby's Digital Cafe</title>
+	<style>
+		:root {
+			--custom-tone-1: 105;
+			--custom-tone-2: 90;
+		}
+	</style>
+	<script>
+		(function () {
+			function getCookie(name) {
+				var m = new RegExp("(^| )" + name + "=([^;]+)").exec(document.cookie);
+				return m ? m[2] : null;
+			}
+			var saved = getCookie("theme") || localStorage.getItem("theme");
+			var isDark = saved
+				? saved.includes("dark")
+				: globalThis.matchMedia("(prefers-color-scheme: dark)").matches;
+			if (isDark) {
+				document.documentElement.setAttribute("dark-mode", "");
+			} else {
+				document.documentElement.removeAttribute("dark-mode");
+			}
+		})();
+	</script>
+	<link rel="stylesheet" href="/prerender.css" />
+</head>
+
+<body>
+	<!--
+		Bloque estático: describe la app en el HTML inicial, sin ejecutar JS. Es lo que ven los
+		crawlers y cualquier revisor que no corra el bundle. Lo tapa /prerender.css en cuanto el
+		bundle llena el contenedor de React.
+	-->
+	<div id="prerender">
+		<h1>Generadores y utilidades</h1>
+		<p class="prerender-lead">Convertí texto a letras decorativas, generá paletas de color y escribí con tipografías libres. Sin cuenta, sin publicidad y con el resultado guardable en tu Drive de Abby's Digital Cafe.</p>
+		<ul>
+			<li><strong>Letras</strong> <span>Cursiva, góticas, burbuja y más, listas para copiar y pegar.</span></li>
+			<li><strong>Paletas</strong> <span>Generá combinaciones, fijá colores y comprobá el contraste WCAG.</span></li>
+			<li><strong>Tipografías</strong> <span>Escribí con fuentes libres y descargá el resultado como imagen.</span></li>
+			<li><strong>Texto</strong> <span>Mayúsculas, slugs, acentos, conteo y texto de relleno.</span></li>
+		</ul>
+		<p class="prerender-links">
+			<a href="https://adigitalcafe.com/">Abby's Digital Cafe</a> ·
+			<a href="https://help.adigitalcafe.com/licenses">Licencias de terceros</a> ·
+			<a href="https://help.adigitalcafe.com/privacy">Política de privacidad</a> ·
+			<a href="https://help.adigitalcafe.com/terms">Términos y condiciones</a>
+		</p>
+	</div>
+	<div id="root"></div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+	"name": "@adc-platform/adc-generators",
+	"license": "LicenseRef-Proprietary",
+	"author": "abbytec",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"dependencies": {
+		"@fontsource/bebas-neue": "^5.2.5",
+		"@fontsource/caveat": "^5.2.5",
+		"@fontsource/dancing-script": "^5.2.5",
+		"@fontsource/lobster": "^5.2.5",
+		"@fontsource/pacifico": "^5.2.5",
+		"@fontsource/playfair-display": "^5.2.5",
+		"@fontsource/press-start-2p": "^5.2.5",
+		"@fontsource/space-mono": "^5.2.5"
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"uiModule": {
+		"name": "adc-generators",
+		"uiNamespace": "adc-platform",
+		"uiName": "Generadores",
+		"framework": "react",
+		"outputDir": "dist-ui",
+		"isHost": true,
+		"isRemote": false,
+		"serviceWorker": true,
+		"uiDependencies": ["adc-ui-library"],
+		"devPort": 3050,
+		"sharedLibs": ["react", "tailwind"],
+		"i18n": true,
+		"enableSEO": true,
+		"security": {
+			"headers": {
+				"Content-Security-Policy-Restrict": "frame-src 'none'",
+				"Content-Security-Policy-Extend": "img-src 'self' data: blob:; connect-src 'self' https: http://localhost:3000"
+			}
+		},
+		"hosting": [
+			{
+				"domains": ["adigitalcafe.com"],
+				"subdomains": ["gen"]
+			}
+		]
+	},
+	"services": [
+		{
+			"name": "GeneratorsService",
+			"version": "latest"
+		},
+		{
+			"name": "SEOService",
+			"version": "latest",
+			"optional": true
+		}
+	]
+}

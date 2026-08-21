@@ -1,0 +1,36 @@
+{
+	"name": "GeneratorsService",
+	"uiName": "Generadores",
+	"privileges": [
+		"plans:register"
+	],
+	"version": "1.0.0",
+	"failOnError": false,
+	"providers": [
+		{
+			"name": "object/mongo",
+			"version": "latest",
+			"language": "typescript",
+			"custom": {
+				"host": "${MONGO_HOST:-localhost:27017}",
+				"user": "${MONGO_USER:-admin}",
+				"password": "${MONGO_PASSWORD:-password}",
+				"options": "${MONGO_OPTIONS:-replicaSet=rs0&authSource=admin}",
+				"db": "adc-generators",
+				"maxRetries": 5,
+				"retryDelay": 5000
+			}
+		}
+	],
+	"services": [
+		{
+			"name": "EndpointManagerService",
+			"version": "latest"
+		},
+		{
+			"name": "PlanService",
+			"version": "latest",
+			"optional": true
+		}
+	]
+}

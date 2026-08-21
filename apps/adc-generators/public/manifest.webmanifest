@@ -1,0 +1,43 @@
+{
+	"id": "/",
+	"name": "Generadores ADC",
+	"short_name": "Generadores",
+	"description": "Generadores de letras, paletas y tipografías.",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"orientation": "any",
+	"lang": "es",
+	"dir": "ltr",
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
+	"categories": [
+		"productivity"
+	],
+	"icons": [
+		{
+			"src": "/icons/icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/icon-192-maskable.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/icons/icon-512-maskable.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
+}
